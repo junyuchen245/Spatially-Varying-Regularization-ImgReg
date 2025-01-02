@@ -21,3 +21,16 @@ This is a **PyTorch** implementation of my paper:
 ## Hypernetwork for continuous regularization control
 We further incorporated the concept from [HyperMorph](https://www.melba-journal.org/papers/2022:003.html), enabling the learning of a set of regularization hyperparameters for continuous control of spatially varying regularization at the test time.
 <img src="https://github.com/junyuchen245/Spatially-Varying-Regularization-ImgReg/blob/main/example_imgs/HyperTMSPR.jpg" width="800"/>
+
+## Citation:
+If you find this code is useful in your research, please consider to cite:
+    
+    @article{chen2024unsupervised,
+    title={Unsupervised learning of spatially varying regularization for diffeomorphic image registration},
+    author={Chen, Junyu and Wei, Shuwen and Liu, Yihao and Bian, Zhangxing and He, Yufan and Carass, Aaron and Bai, Harrison and Du, Yong},
+    journal={arXiv preprint arXiv:2412.17982},
+    year={2024}
+    }
+
+### <a href="https://junyuchen245.github.io"> About Me</a>
+    
