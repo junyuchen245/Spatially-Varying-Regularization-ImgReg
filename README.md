@@ -11,7 +11,7 @@ This is a **PyTorch** implementation of my paper:
 ***Spatially varying regularization*** accommodates the deformation variations that may be necessary for different anatomical regions during deformable image registration. Historically, optimization-based registration models have harnessed *spatially varying regularization* to address anatomical subtleties. However, most modern deep learning-based models tend to gravitate towards ***spatially invariant regularization***, wherein a homogenous regularization strength is applied across the entire image, potentially disregarding localized variations. In this paper, we propose a hierarchical probabilistic model that integrates a prior distribution on the deformation regularization strength, enabling the ***end-to-end learning of a spatially varying deformation regularizer*** directly from the data.
 
 ## Registration tasks
-* Atlas-to-subject registration on **IXI** dataset (brain MRI) [[code]](https://github.com/junyuchen245/Spatially-Varying-Regularization-ImgReg/tree/main/IXI)
+* Atlas-to-subject registration on **IXI** dataset (brain MRI) [[code](https://github.com/junyuchen245/Spatially-Varying-Regularization-ImgReg/tree/main/IXI)]
 * Atlas-to-subject registration on **AutoPET** dataset (whole-body CT) [To be added]
 * Intra-subject registration on **ACDC** and **M&Ms** dataset (cardiac MRI) [To be added]
 
