@@ -954,7 +954,7 @@ class TransMorphTVF(nn.Module):
         x = self.up1(x, f2, hyper=hyper)
         xx = self.up2(x, f3, hyper=hyper)
         def_x = mov.clone()
-        flow_previous = 0
+        flow_previous = torch.zeros((mov.shape[0], 3, mov.shape[2], mov.shape[3], mov.shape[4])).to(mov.device)
         flows = []
 
         # flow integration
@@ -963,7 +963,7 @@ class TransMorphTVF(nn.Module):
             x = self.up3s[t](xx, f_out, hyper=hyper)
             flow = self.reg_heads[t](x, hyper)
             flows.append(flow)
-            flow_new = flow_previous + self.spatial_trans_(flow, flow)
+            flow_new = flow_previous + self.spatial_trans_(flow, flow_previous)
             def_x = self.spatial_trans_(mov, flow_new)
             flow_previous = flow_new
         flow = flow_new
@@ -1063,7 +1063,7 @@ class TransMorphTVFSPR(nn.Module):
         x = self.up1(x, f2, hyper=hyper)
         xx = self.up2(x, f3, hyper=hyper)
         def_x = mov.clone()
-        flow_previous = 0
+        flow_previous = torch.zeros((mov.shape[0], 3, mov.shape[2], mov.shape[3], mov.shape[4])).to(mov.device)
         flows = []
 
         # flow integration
@@ -1074,7 +1074,7 @@ class TransMorphTVFSPR(nn.Module):
             xs += x
             flow = self.reg_heads[t](x, hyper)
             flows.append(flow)
-            flow_new = flow_previous + self.spatial_trans_(flow, flow)
+            flow_new = flow_previous + self.spatial_trans_(flow, flow_previous)
             def_x = self.spatial_trans_(mov, flow_new)
             flow_previous = flow_new
         flow = flow_new
