@@ -22,7 +22,7 @@ This is a **PyTorch** implementation of my paper:
 * Inter-subject registration on **4DCT** dataset (Lung CT) [[See MIR Package](https://github.com/junyuchen245/MIR/tree/main)]
 
 ## Examples of the learned spatially varying regularizer
-<img src="https://github.com/junyuchen245/Spatially-Varying-Regularization-ImgReg/blob/main/example_imgs/Qualitative_Results.jpg" width="800"/>
+<img src="https://github.com/junyuchen245/Spatially-Varying-Regularization-ImgReg/blob/main/example_imgs/Qualitative_Results_.jpg" width="800"/>
 
 ## Hypernetwork for continuous regularization control
 We further incorporated the concept from [HyperMorph](https://www.melba-journal.org/papers/2022:003.html), enabling the learning of a set of regularization hyperparameters for continuous control of spatially varying regularization at the test time.
